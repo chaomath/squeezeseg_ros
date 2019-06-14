@@ -24,7 +24,7 @@ $ source devel/setup.bash
 ```
 4. run: 
 ```bash
-$ roslaunch squeeze run.launch
+$ roslaunch squeezeseg_ros run.launch
 ```
 
 ##  Attention
