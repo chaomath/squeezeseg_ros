@@ -12,7 +12,6 @@
 
     <node pkg="squeezeseg_ros" type="squeezeseg_ros_node.py" name="squeezeseg_ros_node" output="screen">
     </node>
-
+    
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find squeezeseg_ros)/rviz/default.rviz" />
-
 </launch>

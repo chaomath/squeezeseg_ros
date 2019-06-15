@@ -182,9 +182,9 @@ def velo_callback(msg):
     x_channel, y_channel, z_channel, i_channel))
     cloud_input = np.array(list(pcl_msg), dtype=np.float32)
     print("\ncloud_input.shape = ", cloud_input.shape)
-    
+
     #intensity must be(0, 1), normalize intensity in order for (0, 255)
-    _normalize(cloud_input[:, 3])
+    cloud_input[:, 3] = _normalize(cloud_input[:, 3])
 
     #crop and project cloud to spherical image
     crop_points = crop_cloud(cloud_input) #[-45, 45], (x,y,z,i)
