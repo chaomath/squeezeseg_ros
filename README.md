@@ -47,6 +47,7 @@ sometimes the intensity channel is "intensity", and you should change the value 
 
 ### article
 [SqueezeSeg](https://arxiv.org/abs/1710.07368)
+
     @inproceedings{wu2017squeezeseg,
        title={Squeezeseg: Convolutional neural nets with recurrent crf for real-time road-object segmentation from 3d lidar point cloud},
        author={Wu, Bichen and Wan, Alvin and Yue, Xiangyu and Keutzer, Kurt},
