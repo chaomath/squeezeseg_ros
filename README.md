@@ -22,7 +22,11 @@ $ catkin_make
 ```bash
 $ source devel/setup.bash
 ```
-4. run: 
+4. add authority to script file
+```bash
+$ chmod 755 src/squeezeseg_ros/scripts/squeezeseg_ros_node.py
+```
+5. run: 
 ```bash
 $ roslaunch squeezeseg_ros run.launch
 ```
