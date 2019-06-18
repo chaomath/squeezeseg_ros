@@ -1,0 +1,17 @@
+<launch>
+    <param name="checkpoint" type="string" value="$(find squeezeseg_ros)/data/SqueezeSeg/model.ckpt-23000" />
+    <param name="sub_topic" type="string" value="/kitti/velo/pointcloud" />
+    <param name="pub_topic" type="string" value="/velodyne_points_squeeze" />
+    <param name="frame_id" type="string" value="velo_link" />
+    <param name="x_channel" type="string" value="x" />
+    <param name="y_channel" type="string" value="y" />
+    <param name="z_channel" type="string" value="z" />
+    <param name="i_channel" type="string" value="i" />
+    <param name="gpu" type="string" value="0" />
+    <param name="device_id" type="int" value="0" /> <!--(cpu:-1)(gpu:0)-->
+
+    <node pkg="squeezeseg_ros" type="squeezeseg_ros_node.py" name="squeezeseg_ros_node" output="screen">
+    </node>
+    
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find squeezeseg_ros)/rviz/default.rviz" />
+</launch>
